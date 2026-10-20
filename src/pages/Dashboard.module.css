@@ -1,0 +1,125 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.topSection {
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  min-height: 0;
+}
+
+.cameraWorkspaceContainer {
+  flex: 6.2;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.aiSidebar {
+  flex: 3.8;
+  min-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  border-radius: 8px;
+  padding: 14px 16px;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+}
+
+.aiCoreContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+
+.aiStateWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.controlsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.audioPanelContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.decodingContainer {
+  margin-top: 16px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+.bottomSection {
+  height: 250px;
+  flex-shrink: 0;
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .topSection {
+    flex-direction: column;
+  }
+  
+  .cameraWorkspaceContainer {
+    flex: none;
+    height: 50vh;
+  }
+  
+  .aiSidebar {
+    flex: none;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 8px;
+    gap: 8px;
+  }
+  
+  .cameraWorkspaceContainer {
+    height: 40vh;
+  }
+  
+  .bottomSection {
+    height: 200px;
+  }
+}
+

@@ -1,0 +1,114 @@
+.container {
+  position: fixed;
+  inset: 0;
+  background: #060a10;
+  background-image: linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  color: #fff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 0.15em;
+  color: #00d4ff;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+  margin: 0 0 16px 0;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+.tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 48px 0;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.5s;
+}
+
+.stages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.stage {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.stage.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.checkIcon {
+  color: #10b981;
+}
+
+.spinner {
+  color: #00d4ff;
+  animation: spin 1s linear infinite;
+}
+
+.placeholder {
+  width: 16px;
+  height: 16px;
+}
+
+.readyText {
+  color: #00d4ff;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+}
+
+.progressContainer {
+  position: absolute;
+  bottom: 40px;
+  width: 300px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: #00d4ff;
+  box-shadow: 0 0 8px #00d4ff;
+  transition: width 0.1s linear;
+}
+
+@keyframes pulseGlow {
+  from { text-shadow: 0 0 10px rgba(0, 212, 255, 0.3); }
+  to { text-shadow: 0 0 30px rgba(0, 212, 255, 0.7); }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}

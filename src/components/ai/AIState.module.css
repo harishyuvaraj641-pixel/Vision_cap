@@ -1,0 +1,45 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background: rgba(6, 10, 16, 0.6);
+  border: 1px solid rgba(0, 212, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.icon {
+  opacity: 0.9;
+}
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+.label {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: var(--vc-text-primary, #ffffff);
+  font-weight: 500;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

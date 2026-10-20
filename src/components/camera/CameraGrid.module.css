@@ -1,0 +1,85 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+}
+
+.cell {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--vc-radius-md, 8px);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cell:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.cell.active {
+  border-color: var(--vc-color-accent, #00d4ff);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.15);
+}
+
+.previewPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+}
+
+.cellOverlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 12px;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cameraName {
+  font-family: var(--vc-font-heading, 'Orbitron', sans-serif);
+  font-size: 0.9rem;
+  color: white;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #555;
+}
+
+.live { background: #22c55e; box-shadow: 0 0 5px #22c55e; }
+.ready { background: #3b82f6; }
+.disconnected { background: #ef4444; }
+.connecting { background: #eab308; }
+
+.emptyCell {
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: var(--vc-radius-md, 8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: var(--vc-font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.emptyIcon {
+  opacity: 0.5;
+}

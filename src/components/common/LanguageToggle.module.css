@@ -1,0 +1,67 @@
+.toggleBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(6, 10, 16, 0.7);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 20px;
+  padding: 4px 10px;
+  color: var(--vc-text-primary, #ffffff);
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.toggleBtn:hover {
+  border-color: #00d4ff;
+  background: rgba(0, 212, 255, 0.12);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.activeTamil {
+  border-color: rgba(245, 158, 11, 0.5);
+  background: rgba(245, 158, 11, 0.1);
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.25);
+}
+
+.activeTamil:hover {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.18);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+}
+
+.globeIcon {
+  color: #00d4ff;
+  transition: transform 0.3s ease;
+}
+
+.activeTamil .globeIcon {
+  color: #f59e0b;
+}
+
+.toggleBtn:hover .globeIcon {
+  transform: rotate(20deg);
+}
+
+.langText {
+  font-weight: 600;
+}
+
+.badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  padding: 1px 5px;
+  border-radius: 8px;
+  background: rgba(0, 212, 255, 0.2);
+  color: #00d4ff;
+}
+
+.activeTamil .badge {
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+}

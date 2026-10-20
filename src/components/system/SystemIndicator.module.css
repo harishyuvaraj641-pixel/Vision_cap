@@ -1,0 +1,35 @@
+.indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot.green { background: #10b981; box-shadow: 0 0 6px rgba(16, 185, 129, 0.5); }
+.dot.cyan { background: #00d4ff; box-shadow: 0 0 6px rgba(0, 212, 255, 0.5); }
+.dot.yellow { background: #facc15; box-shadow: 0 0 6px rgba(250, 204, 21, 0.5); }
+.dot.red { background: #ef4444; box-shadow: 0 0 6px rgba(239, 68, 68, 0.5); }
+.dot.gray { background: #4b5563; }
+
+.label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+
+.statusText {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #fff;
+  margin-left: auto;
+}

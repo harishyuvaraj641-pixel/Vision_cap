@@ -1,0 +1,192 @@
+/* ═══════════════════════════════════════════════════════
+   VISIONCAP — Global Styles
+   ═══════════════════════════════════════════════════════ */
+
+@import './variables.css';
+@import './animations.css';
+
+/* ─── Reset ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--vc-font-body);
+  font-size: var(--vc-text-base);
+  color: var(--vc-text-primary);
+  background: var(--vc-bg-primary);
+  line-height: 1.5;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vc-text-muted);
+  border-radius: var(--vc-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vc-text-tertiary);
+}
+
+/* ─── Selection ─── */
+::selection {
+  background: var(--vc-cyan-glow);
+  color: var(--vc-cyan);
+}
+
+/* ─── Focus ─── */
+:focus-visible {
+  outline: 2px solid var(--vc-cyan);
+  outline-offset: 2px;
+  border-radius: var(--vc-radius-sm);
+}
+
+/* ─── Links ─── */
+a {
+  color: var(--vc-cyan);
+  text-decoration: none;
+  transition: color var(--vc-transition-fast);
+}
+
+a:hover {
+  color: var(--vc-cyan-dim);
+}
+
+/* ─── Buttons ─── */
+button {
+  font-family: var(--vc-font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ─── Inputs ─── */
+input, select, textarea {
+  font-family: var(--vc-font-body);
+  font-size: var(--vc-text-base);
+  color: var(--vc-text-primary);
+  background: var(--vc-bg-secondary);
+  border: 1px solid var(--vc-border);
+  border-radius: var(--vc-radius-sm);
+  padding: var(--vc-space-sm) var(--vc-space-md);
+  transition: border-color var(--vc-transition-fast);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--vc-cyan-border);
+  outline: none;
+}
+
+/* ─── Typography Utilities ─── */
+.font-display { font-family: var(--vc-font-display); }
+.font-mono { font-family: var(--vc-font-mono); }
+
+/* ─── Glass Surface ─── */
+.glass {
+  background: var(--vc-glass-bg);
+  backdrop-filter: blur(var(--vc-glass-blur));
+  -webkit-backdrop-filter: blur(var(--vc-glass-blur));
+  border: 1px solid var(--vc-glass-border);
+  border-radius: var(--vc-radius-md);
+}
+
+.glass-solid {
+  background: var(--vc-glass-bg-solid);
+  backdrop-filter: blur(var(--vc-glass-blur));
+  -webkit-backdrop-filter: blur(var(--vc-glass-blur));
+  border: 1px solid var(--vc-glass-border);
+  border-radius: var(--vc-radius-md);
+}
+
+/* ─── Status Dot ─── */
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.status-dot--online {
+  background: var(--vc-success);
+  box-shadow: 0 0 6px var(--vc-success-glow);
+}
+
+.status-dot--warning {
+  background: var(--vc-warning);
+  box-shadow: 0 0 6px var(--vc-warning-glow);
+}
+
+.status-dot--error {
+  background: var(--vc-error);
+  box-shadow: 0 0 6px var(--vc-error-glow);
+}
+
+.status-dot--offline {
+  background: var(--vc-text-muted);
+}
+
+/* ─── Technical Label ─── */
+.tech-label {
+  font-family: var(--vc-font-mono);
+  font-size: var(--vc-text-xs);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--vc-text-tertiary);
+}
+
+/* ─── Section Title ─── */
+.section-title {
+  font-family: var(--vc-font-display);
+  font-size: var(--vc-text-sm);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--vc-text-secondary);
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ─── Grid Background ─── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}

@@ -1,0 +1,113 @@
+.container {
+  background: rgba(6, 10, 16, 0.7);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 100%;
+  max-width: 280px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-sizing: border-box;
+}
+
+.header {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 11px;
+  color: var(--vc-text-secondary, #9ca3af);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.iconBox {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--vc-accent-cyan, #00d4ff);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.deviceName {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--vc-text-primary, #ffffff);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.demoBadge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  padding: 2px 4px;
+  background: rgba(139, 92, 246, 0.2);
+  color: var(--vc-accent-violet, #8b5cf6);
+  border-radius: 4px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--vc-text-muted, #4b5563);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.connected { background: var(--vc-success, #22c55e); box-shadow: 0 0 5px var(--vc-success, #22c55e); }
+.disconnected { background: var(--vc-error, #ef4444); }
+
+.changeBtn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--vc-text-secondary, #9ca3af);
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.changeBtn:hover {
+  border-color: var(--vc-accent-cyan, #00d4ff);
+  color: var(--vc-accent-cyan, #00d4ff);
+  background: rgba(0, 212, 255, 0.05);
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 12px 0;
+}

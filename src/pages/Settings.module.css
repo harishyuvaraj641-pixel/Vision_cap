@@ -1,0 +1,96 @@
+.settingsPage {
+  height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  color: var(--text-primary, #ffffff);
+  margin: 0;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  gap: 24px;
+  min-height: 0;
+}
+
+.sidebar {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.tabButton {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: left;
+  padding: 12px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.tabButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.tabButton.active {
+  background: rgba(138, 43, 226, 0.15);
+  color: #8a2be2;
+  border-left: 3px solid #8a2be2;
+}
+
+.mainArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.settingsCard {
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  border-radius: 8px;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+  flex: 1;
+}
+
+.cardTitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  margin: 0 0 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 16px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.placeholderText {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}

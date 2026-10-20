@@ -1,0 +1,59 @@
+.statusbar {
+  height: 36px;
+  background: #060a10;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 100;
+}
+
+.leftGroup {
+  display: flex;
+  gap: 24px;
+}
+
+.statusItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.dot.green { background: #10b981; box-shadow: 0 0 5px rgba(16, 185, 129, 0.5); }
+.dot.yellow { background: #facc15; box-shadow: 0 0 5px rgba(250, 204, 21, 0.5); }
+.dot.red { background: #ef4444; box-shadow: 0 0 5px rgba(239, 68, 68, 0.5); }
+.dot.gray { background: #4b5563; }
+
+.label {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.count {
+  color: #00d4ff;
+  font-weight: 700;
+}
+
+.statusText {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+}
+
+.version {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,153 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.modal {
+  background: var(--vc-color-base, #060a10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--vc-radius-lg, 12px);
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(0, 212, 255, 0.1);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.title {
+  font-family: var(--vc-font-heading, 'Orbitron', sans-serif);
+  font-size: 1.1rem;
+  color: white;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.form {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: var(--vc-font-body, 'Inter', sans-serif);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.field input, .field select {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 10px 12px;
+  color: white;
+  font-family: var(--vc-font-mono, 'JetBrains Mono', monospace);
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.field input:focus, .field select:focus {
+  outline: none;
+  border-color: var(--vc-color-accent, #00d4ff);
+  box-shadow: 0 0 0 2px rgba(0, 212, 255, 0.2);
+}
+
+.field select option {
+  background: var(--vc-color-base, #060a10);
+  color: white;
+}
+
+.helperText {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: var(--vc-font-mono, 'JetBrains Mono', monospace);
+}
+
+.pathRow {
+  display: flex;
+  gap: 16px;
+}
+
+.pathRow .field {
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cancelBtn, .submitBtn {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-family: var(--vc-font-body, 'Inter', sans-serif);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancelBtn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.cancelBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.submitBtn {
+  background: var(--vc-color-accent, #00d4ff);
+  border: 1px solid var(--vc-color-accent, #00d4ff);
+  color: #000;
+}
+
+.submitBtn:hover {
+  background: #00e5ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+}

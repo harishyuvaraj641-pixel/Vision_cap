@@ -1,0 +1,122 @@
+/* ═══════════════════════════════════════════════════════
+   VISIONCAP Design System — CSS Custom Properties
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  /* ─── Base Colors ─── */
+  --vc-black: #030508;
+  --vc-bg-primary: #060a10;
+  --vc-bg-secondary: #0c1220;
+  --vc-bg-tertiary: #111a2e;
+  --vc-bg-elevated: #141e33;
+  --vc-surface: #0e1628;
+  --vc-surface-hover: #152035;
+  --vc-surface-active: #1a2840;
+
+  /* ─── Text ─── */
+  --vc-text-primary: #e8edf5;
+  --vc-text-secondary: #8899b4;
+  --vc-text-tertiary: #5a6d8a;
+  --vc-text-muted: #3d4f6a;
+
+  /* ─── Accent — Cyan ─── */
+  --vc-cyan: #00d4ff;
+  --vc-cyan-dim: #0099cc;
+  --vc-cyan-glow: rgba(0, 212, 255, 0.15);
+  --vc-cyan-subtle: rgba(0, 212, 255, 0.06);
+  --vc-cyan-border: rgba(0, 212, 255, 0.2);
+
+  /* ─── Accent — Violet ─── */
+  --vc-violet: #8b5cf6;
+  --vc-violet-dim: #6d3fd4;
+  --vc-violet-glow: rgba(139, 92, 246, 0.15);
+  --vc-violet-subtle: rgba(139, 92, 246, 0.06);
+
+  /* ─── Status Colors ─── */
+  --vc-success: #22c55e;
+  --vc-success-dim: #16a34a;
+  --vc-success-glow: rgba(34, 197, 94, 0.15);
+  --vc-warning: #f59e0b;
+  --vc-warning-dim: #d97706;
+  --vc-warning-glow: rgba(245, 158, 11, 0.15);
+  --vc-error: #ef4444;
+  --vc-error-dim: #dc2626;
+  --vc-error-glow: rgba(239, 68, 68, 0.15);
+
+  /* ─── Borders ─── */
+  --vc-border: rgba(255, 255, 255, 0.06);
+  --vc-border-hover: rgba(255, 255, 255, 0.1);
+  --vc-border-active: rgba(0, 212, 255, 0.3);
+
+  /* ─── Glass ─── */
+  --vc-glass-bg: rgba(12, 18, 32, 0.6);
+  --vc-glass-bg-solid: rgba(12, 18, 32, 0.85);
+  --vc-glass-blur: 16px;
+  --vc-glass-border: rgba(255, 255, 255, 0.08);
+
+  /* ─── Typography ─── */
+  --vc-font-display: 'Orbitron', sans-serif;
+  --vc-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --vc-font-mono: 'JetBrains Mono', 'Share Tech Mono', monospace;
+
+  --vc-text-xs: 0.625rem;    /* 10px */
+  --vc-text-sm: 0.75rem;     /* 12px */
+  --vc-text-base: 0.8125rem; /* 13px */
+  --vc-text-md: 0.875rem;    /* 14px */
+  --vc-text-lg: 1rem;        /* 16px */
+  --vc-text-xl: 1.25rem;     /* 20px */
+  --vc-text-2xl: 1.5rem;     /* 24px */
+  --vc-text-3xl: 2rem;       /* 32px */
+
+  /* ─── Spacing ─── */
+  --vc-space-xs: 4px;
+  --vc-space-sm: 8px;
+  --vc-space-md: 12px;
+  --vc-space-lg: 16px;
+  --vc-space-xl: 24px;
+  --vc-space-2xl: 32px;
+  --vc-space-3xl: 48px;
+
+  /* ─── Radius ─── */
+  --vc-radius-sm: 6px;
+  --vc-radius-md: 10px;
+  --vc-radius-lg: 14px;
+  --vc-radius-xl: 20px;
+  --vc-radius-full: 9999px;
+
+  /* ─── Shadows ─── */
+  --vc-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --vc-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --vc-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --vc-shadow-glow-cyan: 0 0 20px rgba(0, 212, 255, 0.15);
+  --vc-shadow-glow-violet: 0 0 20px rgba(139, 92, 246, 0.15);
+
+  /* ─── Transitions ─── */
+  --vc-transition-fast: 120ms ease;
+  --vc-transition-normal: 200ms ease;
+  --vc-transition-slow: 400ms ease;
+  --vc-transition-smooth: 600ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ─── Layout ─── */
+  --vc-topbar-height: 56px;
+  --vc-statusbar-height: 36px;
+  --vc-sidebar-width: 280px;
+}
+
+/* ─── Large Text Mode ─── */
+[data-large-text="true"] {
+  --vc-text-xs: 0.75rem;
+  --vc-text-sm: 0.875rem;
+  --vc-text-base: 1rem;
+  --vc-text-md: 1.0625rem;
+  --vc-text-lg: 1.25rem;
+}
+
+/* ─── High Contrast Mode ─── */
+[data-high-contrast="true"] {
+  --vc-text-primary: #ffffff;
+  --vc-text-secondary: #c0cde0;
+  --vc-text-tertiary: #8899b4;
+  --vc-border: rgba(255, 255, 255, 0.15);
+  --vc-border-hover: rgba(255, 255, 255, 0.25);
+}
