@@ -308,6 +308,5 @@ MIT License — Built for the **VISIONCAP** Project.
 ---
 
 <p align="center">
-  <strong>Built with 💙 for accessibility</strong><br/>
   <sub>Empowering vision through voice, AI, and real-time perception.</sub>
 </p>
